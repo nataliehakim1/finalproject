@@ -1,0 +1,48 @@
+---
+title: "Daily Smoking and Median Household Income in 2011"
+author: "Natalie Hakim"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Introduction
+Smoking and daily tobacco use has been shown to be more prevalent in adults with lower income. The objective of this analysis is to see if there is a correlation between smoking everyday and having a lower annual median household income. Two different data sets were used from the same year (2011), the smoking data was from the CDC. National Median Annual Household Income was pulled from the Census Bureau. 
+
+```{r, here-i-am, include = FALSE}
+here::i_am(
+  "Gitfinal.Rmd"
+)
+```
+
+### Table 1 
+
+Table 1 demonstrates the correlation between a lower income and a higher rate of smoking everyday. States were grouped in two groups, one group having an income higher than the national median income in 2011 ($50,054). The other group of states had an income below the national median. 
+
+```{r, table1}
+readRDS(file = here::here("output/finalproject1.rds"))
+
+```
+
+
+### Table 2
+Table 2 was yielded from running an unpaired two sample t test. Variance was assumed to be the same here, which resulted in a t statistic of 4.409261 and p value of 5.83e-05, which indicates statistical significance since it's less than .05. As a result, the means of the 2 groups are statistically significant. 
+
+```{r, table2}
+readRDS(file = here::here("output", "finalproject2.rds"))
+
+```
+
+
+### Figure 1
+The figure I decided to make to display the data is a box and whisker plot, which further demonstrates that states below the median income ($50,054) correlate with a higher percentage of daily smokers. The minimum for states with an income above the median is muc smaller than the minimum for states that have an income that is below the median. The median for states with a higher income than the national median is around 15%, with the mean being 13.69. In this case, the data is relatively evenly distributed. Similarly, the median of states with incomes below the national median is 18%. The mean is 17.14, so the distribution is much more precise here, with less outliers than the other group. 
+
+```{r, figure1}
+readRDS(file = here::here("output", "finalproject3.rds"))
+
+```
+
+#### % of State Population that Smoke Everyday by Binary Median National Household Income 
+
