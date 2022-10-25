@@ -1,5 +1,7 @@
+
+
 knitr::opts_chunk$set(echo = TRUE)
-here::i_am("finalprojectcode.R")
+here::i_am("code/finalprojectcode.R")
 
 
 library(readr)
