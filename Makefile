@@ -8,5 +8,7 @@ output/finalproject1.rds output/finalproject2.rds output/finalproject3.rds: code
 clean:
 	rm -f output/*.rds && rm -f *.html
 	
-	
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"	
 
