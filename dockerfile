@@ -7,7 +7,6 @@ WORKDIR /project
 
 RUN mkdir code
 RUN mkdir output
-RUN mkdir raw_data
 
 COPY Makefile .
 COPY README.md .
@@ -21,12 +20,13 @@ COPY renv/activate.R renv
 
 RUN Rscript -e "renv::restore(prompt = FALSE)"
 
+RUN mkdir data
 COPY code/* code
 COPY data/* data
 
 RUN mkdir FinalProject
 
-CMD make && mv report.html finalprojectreport
+CMD make && mv report.html FinalProject
 
 
 
