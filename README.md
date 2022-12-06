@@ -15,4 +15,38 @@
 # Report Contents
 
 This report is meant to demonstrate the correlation between lower median household income among adults who are daily smokers using a correlation coefficient analysis, an unpaired two sample t-test, and a box and whisker plot. 
+1. .gitignore
+- ignores the contents of the output folder and the final report.html
+2. report.Rmd
+- Rmarkdown to make the report
+3. README.md
+- what you're reading
+4. Makefile
+- makes report.html
+- make clean cleans the output of the .rds and .png files and report.html
+5. output folder
+- empty in this repo
+- after making the report, should have finalproject1.rds, finalproject2.rds, finalproject3.rds
+6. code folder
+contains the following:
+code/renderproject.R
+code/finalprojectcode.R
+7. data folder
+- includes the raw Income2.csv & Smoke2.csv data
+8. renv folder
+- includes all the R package information
+9. renv.lock
+- records which R packages are used and what version 
+10. Dockerfile
+- used to build the image
+11. FinalProject
+- folder that the final report will build to 
+
+# Building the docker image
+
+Building the docker image can be done by typing make project_image or make pull_image in your terminal. 
+
+# How to Generate the Final Report 
+
+The final report is made by typing 'make finalproject' in your terminal. The html file should be found in the folder named "FinalProject". 
 

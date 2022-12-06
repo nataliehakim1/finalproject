@@ -7,6 +7,7 @@ WORKDIR /project
 
 RUN mkdir code
 RUN mkdir output
+RUN mkdir raw_data
 
 COPY Makefile .
 COPY README.md .
@@ -26,7 +27,7 @@ COPY data/* data
 
 RUN mkdir FinalProject
 
-CMD make && mv report.html FinalProject
+CMD make && mv Gitfinal.html FinalProject
 
 
 
